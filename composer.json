@@ -1,0 +1,17 @@
+{
+  "name": "namesonic/simple-site",
+  "description": "Quick Layout Scaffold",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "njvance",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {"App\\": "src/"}
+  }
+}
