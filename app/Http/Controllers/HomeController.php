@@ -12,6 +12,6 @@ class HomeController extends Controller {
 
     public function handle(): Template
     {
-        return new Template('home');
+        return view('home');
     }
 }

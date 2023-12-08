@@ -1,17 +1,20 @@
-<h1>
-    About Us
-</h1>
-
-<p>
-    Variables should populate here from the controller:
-</p>
-
-<blockquote>
-    <p>
-        Another: {{ another }}
-    </p>
+<div class="w3-container">
+    <h1>
+        About Us
+    </h1>
 
     <p>
-        Random Num: {{ random }}
+        Variables should populate here from the controller:
     </p>
-</blockquote>
+
+    <blockquote>
+        <p>
+            Another: {{ another }}
+        </p>
+
+        <p>
+            Random Num: {{ random }}
+        </p>
+    </blockquote>
+
+</div>

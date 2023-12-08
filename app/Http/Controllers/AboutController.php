@@ -12,6 +12,6 @@ class AboutController extends Controller {
 
     public function handle(): Template
     {
-        return new Template('about', ['another' => 'John Henry', 'random' => rand(1, 100)]);
+        return view('about', ['another' => 'John Henry', 'random' => rand(1, 100)]);
     }
 }
