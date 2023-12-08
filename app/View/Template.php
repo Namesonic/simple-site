@@ -14,10 +14,18 @@ class Template {
         $this->view = $view;
     }
 
+    /**
+     * @throws \Exception
+     */
     public function render($templateName = self::DEFAULT_TEMPLATE): array|string|null
     {
+        $filename = '../resources/layouts/' . $templateName . '.php';
         // Get current layout
-        $output = file_get_contents('../resources/layouts/' . $templateName . '.php');
+        if (file_exists($filename)) {
+            $output = file_get_contents($filename);
+        } else {
+            throw new \Exception('Missing site layout file for template "' . $templateName . '"');
+        }
 
         // Place page into template body
         $output = preg_replace("/\{\{ body }}/", $this->view->getBody(), $output);

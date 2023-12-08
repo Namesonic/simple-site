@@ -2,6 +2,8 @@
 
 namespace App\View;
 
+use http\Exception;
+
 class View {
     private string $page = '';
     private string $body = '';
@@ -20,15 +22,18 @@ class View {
         return $this->params;
     }
 
+    /**
+     * @throws \Exception
+     */
     public function load(): void
     {
         $filename = '../resources/views/' . $this->page . '.php';
         if (file_exists($filename)) {
             if (!$this->body = file_get_contents($filename)) {
-                die('failed to get page template' . $filename);
+                throw new \Exception('Failed to load page template ' . $filename);
             }
         } else {
-            $this->body = 'Missing requested View template file: ' . $filename;
+            throw new \Exception('Missing requested view template file: ' . $filename);
         }
 
         $this->replaceParams();
