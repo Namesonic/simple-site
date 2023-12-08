@@ -8,8 +8,7 @@ class Template {
     private View $view;
 
     /**
-     * @param $page
-     * @param array $vars
+     * @param View $view
      */
     public function __construct(View $view) {
         $this->view = $view;

@@ -35,7 +35,8 @@ class View {
         $this->replaceParams();
     }
 
-    public function replaceParams() {
+    public function replaceParams(): void
+    {
         // Replace body variables
         $matches = [];
         preg_match_all('/\{\{\s+(.*?)\s+}}/m', $this->body, $matches);
