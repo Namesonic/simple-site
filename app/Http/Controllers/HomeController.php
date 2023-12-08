@@ -12,6 +12,6 @@ class HomeController extends Controller {
 
     public function handle(): View
     {
-        return view('home');
+        return view('home')->setTitle('Example', true);
     }
 }

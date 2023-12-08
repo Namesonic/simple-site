@@ -12,6 +12,6 @@ class AboutController extends Controller {
 
     public function handle(): View
     {
-        return view('about', ['another' => 'John Henry', 'random' => rand(1, 100)]);
+        return view('about', ['another' => 'John Henry', 'random' => rand(1, 100)])->setTitle('About Us', true);
     }
 }

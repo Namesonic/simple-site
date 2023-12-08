@@ -11,3 +11,6 @@ const BASE_PATH = __DIR__;
 $handler = new ExceptionHandler();
 set_exception_handler([$handler, 'handle']);
 
+const SITE_NAME = 'SimpleSite';
+const SITE_DESCRIPTION = 'Small (m)VC PHP Framework';
+

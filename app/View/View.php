@@ -2,11 +2,10 @@
 
 namespace App\View;
 
-use http\Exception;
-
 class View {
     private string $page = '';
     private string $body = '';
+    private string $title = '';
     private array $params = [];
 
     public function __construct($page, array $vars = []) {
@@ -14,12 +13,30 @@ class View {
         $this->params = $vars;
     }
 
-    public function getBody() {
+    public function getBody(): string
+    {
         return $this->body;
     }
 
-    public function getParams() {
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    public function getParams(): array
+    {
         return $this->params;
+    }
+
+    public function setTitle($title, $addSuffix = false): static
+    {
+        $this->title = $title;
+
+        if ($addSuffix) {
+            $this->title .= " - " . SITE_NAME;
+        }
+
+        return $this;
     }
 
     /**

@@ -3,7 +3,6 @@
 namespace App\View;
 
 class Template {
-    private string $title = '';
     const DEFAULT_TEMPLATE = 'public';
     private View $view;
 
@@ -31,6 +30,6 @@ class Template {
         $output = preg_replace("/\{\{ body }}/", $this->view->getBody(), $output);
 
         // Replace additional variables
-        return preg_replace("/\{\{ title }}/", $this->title ?: '', $output);
+        return preg_replace("/\{\{ title }}/", $this->view->getTitle() ?: SITE_NAME . ' - ' . SITE_DESCRIPTION, $output);
     }
 }
