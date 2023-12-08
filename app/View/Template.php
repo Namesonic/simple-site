@@ -3,13 +3,13 @@
 namespace App\View;
 
 class Template {
-    private $title;
+    private string $title = '';
 
-    private $vars = [];
+    private array $vars = [];
 
     const DEFAULT_TEMPLATE = 'public';
 
-    private $body;
+    private string $body;
 
     /**
      * @param $page
@@ -20,7 +20,8 @@ class Template {
         $this->vars = $vars;
     }
 
-    public function load($templateName) {
+    public function load($templateName): void
+    {
         $filename = '../resources/views/' . $templateName . '.php';
         if (file_exists($filename)) {
             if (!$this->body = file_get_contents($filename)) {
@@ -32,7 +33,8 @@ class Template {
         }
     }
 
-    public function render($templateName = self::DEFAULT_TEMPLATE) {
+    public function render($templateName = self::DEFAULT_TEMPLATE): array|string|null
+    {
         // Replace body variables
         $matches = [];
         preg_match_all('/\{\{\s+(.*?)\s+}}/m', $this->body, $matches);
@@ -51,6 +53,6 @@ class Template {
         $output = preg_replace("/\{\{ body }}/", $this->body, $output);
 
         // Replace additional variables
-        return preg_replace("/\{\{ title }}/", $this->title, $output);
+        return preg_replace("/\{\{ title }}/", $this->title ?: '', $output);
     }
 }

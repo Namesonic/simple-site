@@ -3,5 +3,15 @@
 </h1>
 
 <p>
-    Lorum ipsum dolar. {{ another }} {{ dsr }}
+    Variables should populate here from the controller:
 </p>
+
+<blockquote>
+    <p>
+        Another: {{ another }}
+    </p>
+
+    <p>
+        Random Num: {{ random }}
+    </p>
+</blockquote>
