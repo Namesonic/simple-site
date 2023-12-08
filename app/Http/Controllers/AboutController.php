@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\View\Template;
+use App\View\View;
 
 class AboutController extends Controller {
 
@@ -10,7 +10,7 @@ class AboutController extends Controller {
         parent::__construct();
     }
 
-    public function handle(): Template
+    public function handle(): View
     {
         return view('about', ['another' => 'John Henry', 'random' => rand(1, 100)]);
     }

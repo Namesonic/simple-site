@@ -1,6 +1,8 @@
 <?php
 namespace App\Http;
 
+use App\View\Template;
+
 class Kernel {
     private string $page;
     private string $controllerName;
@@ -22,7 +24,11 @@ class Kernel {
                 $pageController = new $this->controllerName;
 
                 // Run the controller handle method
-                $template = $pageController->handle();
+                $view = $pageController->handle();
+
+                $view->load();
+
+                $template = new Template($view);
 
                 // Output the template rendering
                 echo $template->render();

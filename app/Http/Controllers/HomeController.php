@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\View\Template;
+use App\View\View;
 
 class HomeController extends Controller {
 
@@ -10,7 +10,7 @@ class HomeController extends Controller {
         parent::__construct();
     }
 
-    public function handle(): Template
+    public function handle(): View
     {
         return view('home');
     }

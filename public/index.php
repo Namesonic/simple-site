@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Kernel;
-use App\View\Template;
+use App\View\View;
 
 require '../vendor/autoload.php';
 require '../config/app.php';
@@ -9,7 +9,7 @@ require '../config/app.php';
 $kernel = new Kernel;
 $kernel->handle();
 
-function view($page, $params = []): Template
+function view($page, $params = []): View
 {
-    return new Template($page, $params);
+    return new View($page, $params);
 }
