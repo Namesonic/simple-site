@@ -5,11 +5,19 @@ namespace App\View;
 class Template {
     private $title;
 
+    private $vars = [];
+
     const DEFAULT_TEMPLATE = 'public';
 
     private $body;
-    public function __construct($page) {
+
+    /**
+     * @param $page
+     * @param array $vars
+     */
+    public function __construct($page, array $vars = []) {
         $this->load($page);
+        $this->vars = $vars;
     }
 
     public function load($templateName) {
@@ -25,17 +33,24 @@ class Template {
     }
 
     public function render($templateName = self::DEFAULT_TEMPLATE) {
-        // Place page into template body
+        // Replace body variables
+        $matches = [];
+        preg_match_all('/\{\{\s+(.*?)\s+}}/m', $this->body, $matches);
+        foreach ($matches[1] as $match) {
+            $replace = '';
+            if (isset($this->vars[$match]) ) {
+                $replace = $this->vars[$match];
+            }
+            $this->body = str_replace("{{ $match }}", $replace, $this->body);
+        }
+
+        // Get current layout
         $output = file_get_contents('../resources/layouts/' . $templateName . '.php');
+
+        // Place page into template body
         $output = preg_replace("/\{\{ body }}/", $this->body, $output);
 
         // Replace additional variables
-        $output = preg_replace("/\{\{ title }}/", $this->title, $output);
-
-        $matches = [];
-        preg_match_all('/\{\{\s+(.*?)\s+}}/m', $this->body, $matches);
-        print_r($matches);
-
-        return $output;
+        return preg_replace("/\{\{ title }}/", $this->title, $output);
     }
 }
