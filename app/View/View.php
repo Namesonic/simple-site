@@ -28,8 +28,7 @@ class View {
                 die('failed to get page template' . $filename);
             }
         } else {
-            header("HTTP/1.0 404 Not Found");
-            $this->body = file_get_contents('../resources/errordocs/404.php');
+            $this->body = 'Missing requested View template file: ' . $filename;
         }
 
         $this->replaceParams();

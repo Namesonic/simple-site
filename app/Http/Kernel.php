@@ -36,10 +36,13 @@ class Kernel {
                 // Output the template
                 echo $template->render();
             } else {
-                print "Requested page not found (Missing Controller $controllerName)";
+                header("HTTP/1.0 404 Not Found");
+                print file_get_contents('../resources/errordocs/404.php');
+                // print "Requested page not found (Missing Controller $controllerName)";
             }
         } else {
-            print "Invalid page name ($page)";
+            header("HTTP/1.0 400 Bad Request");
+            print file_get_contents('../resources/errordocs/400.php');
         }
     }
 }
