@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Kernel;
-use App\View\View;
+use SimpleSite\View\View;
+
+session_start();
 
 require '../vendor/autoload.php';
 require '../config/app.php';

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View;
+namespace SimpleSite\View;
 
 class View {
     private string $page = '';

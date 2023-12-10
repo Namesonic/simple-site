@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\View\View;
+use SimpleSite\View\View;
 
 class HomeController extends Controller {
 
@@ -12,6 +12,10 @@ class HomeController extends Controller {
 
     public function handle(): View
     {
+        if (isset($_POST['exception'])) {
+            throw new \Exception('User wanted this');
+        }
+
         return view('home')->setTitle('Example', true);
     }
 }

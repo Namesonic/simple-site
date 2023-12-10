@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-class Controller {
-    private $controllerName;
+use SimpleSite\Http\Controllers\Controller as SimpleSiteController;
 
-    public function __construct() {
+class Controller extends SimpleSiteController{
+    public function __construct()
+    {
+        parent::__construct();
     }
 }

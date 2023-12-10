@@ -7,14 +7,18 @@
         Variables should populate here from the controller:
     </p>
 
-    <blockquote>
-        <p>
-            Another: {{ another }}
-        </p>
+    <form action="?p=about" method="post">
 
-        <p>
-            Random Num: {{ random }}
-        </p>
-    </blockquote>
+        <blockquote>
+            <p>
+                Another: {{ another }}
+            </p>
+
+            <p>
+                Your Page Count: {{ random }} <button class="" name="reset">Reset Counter</button>
+            </p>
+        </blockquote>
+
+    </form>
 
 </div>
