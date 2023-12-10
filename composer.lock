@@ -4,15 +4,58 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "86dc0fcec5c6a1a6de70bbeabcb07e12",
-    "packages": [],
+    "content-hash": "d322da6c582310d7f63f0e40610771fa",
+    "packages": [
+        {
+            "name": "namesonic/simple-site-framework",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Namesonic/simple-site-framework.git",
+                "reference": "1c8774f5f11591a2d7b400979a58cb95bbe5d4d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Namesonic/simple-site-framework/zipball/1c8774f5f11591a2d7b400979a58cb95bbe5d4d5",
+                "reference": "1c8774f5f11591a2d7b400979a58cb95bbe5d4d5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SimpleSite\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Jason Vance",
+                    "email": "jason@namesonic.com"
+                }
+            ],
+            "description": "Simple Site Framework",
+            "support": {
+                "issues": "https://github.com/Namesonic/simple-site-framework/issues",
+                "source": "https://github.com/Namesonic/simple-site-framework/tree/v0.1.0"
+            },
+            "time": "2023-12-10T20:47:58+00:00"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=8.1"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
