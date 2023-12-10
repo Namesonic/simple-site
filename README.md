@@ -1,14 +1,17 @@
-# Simple Site - Scaffolding
+# Simple Site
 
-Use this to scaffold a simple html template project using a lightweight MVC structure.
+This is a scaffolding project for the Simple Site Framework.
+
+Build loosely around the Laravel Framework structure for familiarity, use this package
+to build a simple html website application that utilizes a simple template feature.
 
 ## Features
 
 - Lightweight MVC Structure (sans M)
 - Multiple Layouts
-- No CSS/js dependency
-- Simple variable replacement handling for templates
-- Configuration Handling
+- No CSS/js dependencies (install your own)
+- Simple variable substitution handling for templates
+- Configuration Handling (coming soon)
 - Exception Handling
 
 ## Requires
@@ -21,11 +24,15 @@ Exchange `my-site-name` below with the folder name that will contain your new we
 
 `composer create-project namesonic/simple-site my-site-name`
 
+If composer did not install any dependencies (missing the /vendor folder), or even if it did, you can run, `composer install` to double check.
+
 ## Configuration
 
-Your webserver should be configured to point the document root to the `my-site-name/public` folder.
+For a production server, your webserver document root should be configured to point to `my-site-name/public` folder.
 
 ## Development
+
+This package lays out the following directory structure meant to organize your code, layouts and display pages.
 
 ```
 app\
