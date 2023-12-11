@@ -10,6 +10,29 @@
         <div class="w3-row">
             <div class="w3-half">
 
+                <h2>URL Format</h2>
+
+                <p>Using a standard <a href="?p=home-page">/home-page</a> URL will look for the HomePageController.php
+                    file in your controllers directory.</p>
+
+                <p>
+                    You can also include "/" to traverse folder structures, helping you to keep your controllers and
+                    views neatly organized.
+                </p>
+
+                <p>
+                    For eg. A sub-folder URL like this <a href="?p=gallery/main-item">/gallery/main-item</a> will organize
+                    your items into a gallery folder structure.
+                </p>
+
+                <pre>
+app\
+    Http\
+        Controllers\
+            Gallery\
+                MainItemController.php
+                </pre>
+
                 <h2>Folder Structure</h2>
 
                 <p>
@@ -28,20 +51,13 @@ app\
     Http\
         Controllers\
             IndexController.php (the spash page code)
-            HomeController.php (this page's code)
+            HomePageController.php (this page's code)
             AboutController.php (code for the /about page)
         Exceptions\
             Add custom code exception handlers here
-config\
-    Store configuration files here
 public\
     This is the public facing folder for the application
-    js\
-    css\
-    img\
 resources\
-    errordocs\
-        Website errordocuments are served from this folder <404.php>
     layouts\
         Global template layouts are stored here
     views\

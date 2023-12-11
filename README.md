@@ -56,3 +56,27 @@ resources\
     views\
         Individual page layouts are stored here <pagename.php>
 ```
+
+### URL Format
+
+Using a standard /home-page URL will look for the HomePageController.php file in your controllers directory.
+
+You can also include "/" to traverse folder structures, helping you to keep your controllers and views neatly organized.
+
+For e.g. A sub-folder URL like this /gallery/main-item will organize your items into a gallery folder structure.
+
+```
+app\
+    Http\
+        Controllers\
+            Gallery\
+                MainItemController.php
+```
+
+### Exception Handling
+
+(coming soon)
+
+### Error Documents
+
+(coming soon)

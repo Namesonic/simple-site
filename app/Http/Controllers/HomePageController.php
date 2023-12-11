@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use SimpleSite\View\View;
 
-class HomeController extends Controller {
+class HomePageController extends Controller {
 
     public function __construct() {
         parent::__construct();

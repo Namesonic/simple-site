@@ -17,7 +17,7 @@
             </small>
 
             <div class="w3-padding-32">
-                <a href="?p=home">Enter</a>
+                <a href="?p=home-page">Enter</a>
             </div>
 
         </div>
