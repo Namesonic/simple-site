@@ -11,7 +11,7 @@ require '../config/app.php';
 $kernel = new Kernel;
 $kernel->handle();
 
-function view($page, $params = []): View
+function view($page = '', $params = []): View
 {
     return new View($page, $params);
 }

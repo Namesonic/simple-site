@@ -4,6 +4,8 @@
 
     <p>Your Namesonic/SimpleSite installation is complete!</p>
 
+    <p>Did you like that <a href="?p=index">splash page</a>?</p>
+
     <div class="w3-container">
         <div class="w3-row">
             <div class="w3-half">
@@ -25,6 +27,7 @@
 app\
     Http\
         Controllers\
+            IndexController.php (the spash page code)
             HomeController.php (this page's code)
             AboutController.php (code for the /about page)
         Exceptions\

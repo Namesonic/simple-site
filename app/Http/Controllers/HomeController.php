@@ -16,6 +16,6 @@ class HomeController extends Controller {
             throw new \Exception('User wanted this');
         }
 
-        return view('home')->setTitle('Example', true);
+        return view('home')->setTitle('Home Page', true);
     }
 }
